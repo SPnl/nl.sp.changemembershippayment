@@ -75,7 +75,7 @@ class CRM_Changemembershippayment_Form_ChangeMembershipPayment extends CRM_Core_
   function setDefaultValues() {
     $sql = "SELECT c.* from `civicrm_contribution` `c`
             INNER JOIN `civicrm_membership_payment` `mp` ON `c`.`id` = `mp`.`contribution_id`
-            WHERE `mp`.`membership_id` = %1
+            WHERE `mp`.`membership_id` = %1 and c.receive_date > now()
             ORDER BY `c`.`receive_date`
             LIMIT 1";
     $params = array();
