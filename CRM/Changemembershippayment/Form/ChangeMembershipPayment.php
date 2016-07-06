@@ -113,7 +113,7 @@ class CRM_Changemembershippayment_Form_ChangeMembershipPayment extends CRM_Core_
       $contributionCount = 0;
       while ($dao->fetch()) {
         $this->updateContribution($dao->id, $values);
-        $contributionCount ++;
+        $contributionCount++;
       }
 
       $params['id'] = $this->mid;
@@ -131,11 +131,9 @@ class CRM_Changemembershippayment_Form_ChangeMembershipPayment extends CRM_Core_
       }
       civicrm_api3('Membership', 'create', $params);
 
-      CRM_Core_Session::setStatus('Updated '.$contributionCount.' contributions', '', 'success');
+      CRM_Core_Session::setStatus('Updated ' . $contributionCount . ' contributions', '', 'success');
     }
 
-    $redirect = CRM_Utils_System::url('civicrm/contact/view', 'reset=1&force=1&cid='.$this->cid.'&selectedChild=member');
-    CRM_Utils_System::redirect($redirect);
     parent::postProcess();
   }
 
