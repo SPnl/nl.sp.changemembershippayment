@@ -139,7 +139,7 @@ class CRM_Changemembershippayment_Form_ChangeMembershipPayment extends CRM_Core_
 
   protected function updateContribution($contribution_id, $values) {
     $params['id'] = $contribution_id;
-    $params['contribution_payment_instrument_id'] = $values['payment_instrument_id'];
+    $params['payment_instrument_id'] = $values['payment_instrument_id'];
     $params['total_amount'] = $values['total_amount'];
     $iban_config = CRM_Ibanaccounts_Config::singleton();
     $sepa_config = CRM_Sepamandaat_Config_ContributionSepaMandaat::singleton();
