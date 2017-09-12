@@ -1,0 +1,13 @@
+{
+    "name": "spnl/nl.sp.changemembershippayment",
+    "description": "Change a membership payment",
+    "type": "civicrm-module",
+    "license": "AGPL-3.0",
+    "authors": [
+        {
+            "name": "Jaap Jansma - CiviCooP",
+            "email": "helpdesk@civicoop.org"
+        }
+    ],
+    "require": {}
+}
